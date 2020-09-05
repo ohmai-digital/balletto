@@ -1,0 +1,200 @@
+<!--ph: Titulo Página -->
+<!--ob: titulo -->
+<h1>Ucha Meirelles</h1>
+<h2>inspire-se nas fotos da campanha da maravilhosa Ucha Meirelles com as roupas da Balleto.</h2>
+<!--ob: titulo -->
+<!--ph: Titulo Página -->
+<!--ph: LookBooks -->
+<!--ob: lookbooks -->
+<div id="slideshow">
+
+    <div class="slide">
+        <img src="/arquivos/uchameirelles1.jpg" width="960" height="auto" />
+
+    </div>
+
+    <div class="slide">
+        <img src="/arquivos/uchameirelles2.jpg" width="960" height="auto" />
+    </div>
+
+    <div class="slide">
+        <img src="/arquivos/uchameirelles3.jpg" width="960" height="auto" />
+
+    </div>
+
+    <div class="slide">
+        <img src="/arquivos/uchameirelles4.jpg" width="960" height="auto" />
+    </div>
+
+    <div class="slide">
+        <img src="/arquivos/uchameirelles5.jpg" width="960" height="auto" />
+    </div>
+
+    <div class="slide">
+        <img src="/arquivos/uchameirelles6.jpg" width="960" height="auto" />
+    </div>
+
+    <div class="slide">
+        <img src="/arquivos/uchameirelles7.jpg" width="960" height="auto" />
+    </div>
+
+    <div class="slide">
+        <img src="/arquivos/uchameirelles8.jpg" width="960" height="auto" />
+    </div>
+
+    <div class="slide">
+        <img src="/arquivos/uchameirelles10.jpg" width="960" height="auto" />
+    </div>
+
+    <div class="slide">
+        <img src="/arquivos/uchameirelles11.jpg" width="960" height="auto" />
+    </div>
+
+    <div class="slide">
+        <img src="/arquivos/uchameirelles12.jpg" width="960" height="auto" />
+    </div>
+
+    <div class="slide">
+        <img src="/arquivos/uchameirelles13.jpg" width="960" height="auto" />
+    </div>
+
+    <div class="slide">
+        <img src="/arquivos/uchameirelles14.jpg" width="960" height="auto" />
+
+    </div>
+
+    <div class="slide">
+        <img src="/arquivos/uchameirelles15.jpg" width="960" height="auto" />
+    </div>
+
+    <div class="slide">
+        <img src="/arquivos/uchameirelles16.jpg" width="960" height="auto" />
+    </div>
+
+    <div class="slide">
+        <img src="/arquivos/uchameirelles17.jpg" width="960" height="auto" />
+    </div>
+
+    <div class="slide">
+        <img src="/arquivos/uchameirelles18.jpg" width="960" height="auto" />
+    </div>
+
+    <div class="slide">
+        <img src="/arquivos/uchameirelles19.jpg" width="960" height="auto" />
+    </div>
+
+    <div class="slide">
+        <img src="/arquivos/uchameirelles20.jpg" width="960" height="auto" />
+    </div>
+
+    <div class="slide">
+        <img src="/arquivos/uchameirelles21.jpg" width="960" height="auto" />
+    </div>
+
+    <div class="slide">
+        <img src="/arquivos/uchameirelles22.jpg" width="960" height="auto" />
+    </div>
+
+    <div class="slide">
+        <img src="/arquivos/uchameirelles23.jpg" width="960" height="auto" />
+    </div>
+
+    <div class="slide">
+        <img src="/arquivos/uchameirelles24.jpg" width="960" height="auto" />
+    </div>
+
+    <div class="slide">
+        <img src="/arquivos/uchameirelles25.jpg" width="960" height="auto" />
+    </div>
+
+
+    <div class="slide">
+        <img src="/arquivos/uchameirelles26.jpg" width="960" height="auto" />
+    </div>
+
+    <div class="slide">
+        <img src="/arquivos/uchameirelles27.jpg" width="960" height="auto" />
+    </div>
+
+    <div class="slide">
+        <img src="/arquivos/uchameirelles28.jpg" width="960" height="auto" />
+    </div>
+
+    <div class="slide">
+        <img src="/arquivos/uchameirelles29.jpg" width="960" height="auto" />
+    </div>
+
+    <div class="footer-pag"></div>
+    <div class="fotter-fer">
+        <a href="#indice" class="indice">Indice</a>
+        <a href="mailto:contato@balletto.com.br" class="email">e-Mail</a>
+        <a target="_blank" href="http://www.balletto.com.br">Shop</a>
+        <a class="dssControl prev" direction="-1" href="javascript:void(0)">Voltar</a>
+        <a class="dssControl next" direction="1" href="javascript:void(0)">Avançar</a>
+    </div>
+    <a class="dssControl prev" direction="-1" href="javascript:void(0)"><span>Voltar</span></a>
+    <a class="dssControl next" direction="1" href="javascript:void(0)"><span>Avançar</span></a>
+</div>
+
+<a href="/ucha-meirelles">
+    <div class="comprar-pecas">comprar peças</div>
+</a>
+
+<a href="/campanhas">
+    <div class="pull-right">voltar</div>
+</a>
+<!--ob: lookbooks -->
+<!--ph: LookBooks -->
+<!--ph: script -->
+<!--ob: script -->
+$(document).ready(function($) {           
+    $("#slideshow").divSlideShow({
+       width:430, height:750, loop:0
+    });
+    function link_hash(){
+       if(location.hash.indexOf("#pag=") != -1){
+          var pag = location.hash.replace("#pag=","");
+          $.divSlideShow.goTo("#slideshow",pag-1);
+       }
+    }
+    $(window).hashchange( function(){
+       link_hash();
+    });
+    link_hash();
+ });
+ 
+ $("div.fotter-fer a.indice").click(function() {
+    $("div.indice").fadeIn("slow");
+    $("div.footer-pag").html('ÍNDICE');
+ });
+ 
+ $("div a.indice , div a.next , div a.prev").click(function() {
+    $('#video').attr('src', $('#video').attr('src'));
+ });
+ 
+ $("div.indice a , div.fotter-fer a.next , div.fotter-fer a.prev").click(function() {
+    $("div.indice").fadeOut("slow");
+ });
+ 
+ $(function() {
+    $('div.slide area , div.slide a.entrevista-link').tooltip({
+       track: true,
+       delay: 0,
+       showURL: false,
+       showBody: " - ",
+       fade: 250
+    });
+ });
+ 
+ document.addEventListener('keyup', function(e){
+    if (!e.target.nodeName.toLowerCase().match(/(input|text)/g) && e.keyCode.toString().match(/^(39|37)$/)) {
+       if (e.keyCode == 39){
+          $('a.dssControl.next:eq(0)').click();
+       }else if(e.keyCode == 37){
+           $('a.dssControl.prev:eq(0)').click();
+       } 
+    }
+ });
+<!--ob: script -->
+<!--ph: script -->
+

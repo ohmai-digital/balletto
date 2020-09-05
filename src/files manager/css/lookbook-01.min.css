@@ -1,0 +1,375 @@
+
+#tooltip,
+map {
+    display: none !important
+}
+
+#slideshow {
+    padding: 0;
+    display: block;
+    margin: 40px auto;
+}
+
+#slideshow .slide {
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    overflow-y: hidden !important;
+}
+
+@media only screen and (max-width:430px){
+    .slide{
+         width:360px!important   
+    }
+}
+
+.slide img{display:block;width:100%}
+
+.indice {
+    position: relative;
+    z-index: 1;
+    width: 960px;
+    height: 683px !important;
+    background: #FFF;
+
+}
+
+.campanhas #slideshow {
+    width: 1080px;
+    padding: 0;
+    display: block;
+    margin-top: 40px;
+}
+
+/*.thiago-soares-nero #slideshow,
+.campanha-thiago-soares #slideshow {
+    width: 1080px;
+    height: 780px;
+}
+
+.mariana-kupfer #slideshow,
+.mariana-kupfer-campanha #slideshow {
+    width: 1110px !important;
+}
+
+.mariana-kupfer #slideshow .slide {
+    width: 1110px !important;
+    height: 700px !important;
+}
+
+.mariana-kupfer #slideshow .dssInner {
+    height: 700px !important
+}
+
+.campanha-viareggio #slideshow {
+    width: 1080px;
+    height: 650px;
+}
+
+.campanha-farfalle #slideshow {
+    width: 1080px;
+    height: 650px;
+}
+
+.campanhas .slide {
+    width: 100%;
+}
+
+.campanhas #slideshow .slide img {
+    width: 100%;
+}
+
+
+.thiago-soares-nero #slideshow .slide img,
+.campanha-thiago-soares #slideshow .slide img {
+    width: 100%;
+    height: auto;
+}
+
+.campanha-viareggio #slideshow .slide img {
+    width: auto;
+    height: 600px;
+}
+
+.campanha-farfalle #slideshow .slide img {
+    width: auto;
+    height: 600px;
+}
+
+.mariana-kupfer-campanha #slideshow .slide img {
+    width: 1000px;
+    height: auto;
+}*/
+
+.indice ul {
+    margin: 75px auto 0 auto;
+    width: 848px
+}
+
+.indice ul li {
+    margin: 10px;
+    float: left
+}
+
+.indice ul li a {
+    display: block;
+    text-transform: uppercase;
+    text-align: center;
+    color: #000;
+}
+
+.indice ul li a img {
+    display: block;
+    margin-bottom: 5px;
+    width: 190px;
+    height: 144px;
+    border: 1px solid #efefef;
+    -webkit-box-shadow: #bdbdbd 1px 1px 2px 0px;
+    -moz-box-shadow: #bdbdbd 1px 1px 2px 0px;
+    box-shadow: #bdbdbd 1px 1px 2px 0px
+}
+
+.slide p {
+    position: absolute
+}
+
+.slide p a {
+    position: relative
+}
+
+.slide p strong {
+    display: block;
+    text-transform: uppercase
+}
+
+.slide p cite {
+    display: block;
+    font-weight: bold
+}
+
+.slide img {
+    border: 0
+}
+
+.fotter-fer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 960px;
+    display: none
+}
+
+.fotter-fer a.indice {
+    bottom: -51px;
+    left: 0;
+    background-position: 0 0
+}
+
+.fotter-fer a.email {
+    bottom: -51px;
+    right: 40px;
+    background-position: -90px 0
+}
+
+.fotter-fer a.shop {
+    bottom: -51px;
+    right: 0;
+    background-position: -60px 0
+}
+
+.fotter-fer a.next, .fotter-fer a.prev {
+    cursor: pointer;
+    display: none;
+    top: 22px;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: auto !important;
+    -webkit-box-shadow: #FFF 0 0 0 0;
+    -moz-box-shadow: #FFF 0 0 0 0;
+    box-shadow: #FFF 0 0 0 0
+}
+
+.fotter-fer a.active.next {
+    left: 531px;
+    background-position: -150px 0;
+    display: block !important
+}
+
+.fotter-fer a.active.prev {
+    left: 394px;
+    background-position: -120px 0;
+    display: block !important
+}
+
+.fotter-fer a:hover.indice {
+    background-position: 0 -30px
+}
+
+.fotter-fer a:hover.email {
+    background-position: -90px -30px
+}
+
+.fotter-fer a:hover.shop {
+    background-position: -60px -30px
+}
+
+.fotter-fer a:hover.next {
+    background-position: -150px -30px
+}
+
+.fotter-fer a:hover.prev {
+    background-position: -120px -30px
+}
+
+.pull-right {
+    line-height: 50px;
+}
+
+a:hover {
+    text-decoration: none
+}
+
+/*BOX LINK*/
+#tooltip {
+    font-size: 10px;
+    font-weight: normal;
+    position: absolute;
+    z-index: 3000;
+    background: #FFF;
+    padding: 5px;
+
+    -webkit-box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.36);
+    -moz-box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.36);
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.36);
+}
+
+#tooltip span {
+    display: block
+}
+
+#tooltip span:first-child {
+    text-transform: uppercase;
+    color: #d4a299
+}
+
+#tooltip span:last-child {
+    color: #d4a299
+}
+
+#tooltip h3 {
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 1em
+}
+
+.footer-pag {
+    padding: 8px;
+    width: 20%;
+    display: block;
+    margin: 25px auto;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    padding-top: 0
+}
+
+.fotter-fer {
+    display: none;
+}
+
+/*SLIDE*/
+.dssControl {
+    display: none
+}
+
+.dssControl.active {
+    display: block
+}
+
+#magazineHolder > .control > span {
+    height: 40px;
+    width: 20px;
+    margin-top: -20px;
+    overflow: hidden;
+    position: absolute;
+    text-indent: -5000px;
+    top: 50%
+}
+
+.catalogo-thiago-soares .dssControl.prev {
+    top: -480px
+}
+
+.catalogo-thiago-soares .dssControl.next {
+    float: right;
+    top: -530px
+}
+
+.dssControl.prev,
+.dssControl.next {
+    background: url(/arquivos/brancoFadeBG.png) repeat;
+    position: relative;
+    width: 35px;
+    height: 49px;
+    padding: 5px;
+    overflow: hidden;
+    text-indent: -5000px;
+    top: -430px;
+}
+
+.dssControl.prev {
+    left: 0
+}
+
+.dssControl.next {
+    float: right;
+    top: -480px
+}
+
+.dssControl.prev span, .dssControl.next span {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 30px;
+    height: 50px;
+    background: url(/arquivos/seta.png) no-repeat
+}
+
+.dssControl.prev span {
+    background-position: 0 0
+}
+
+.dssControl.next span {
+    background-position: -30px 0
+}
+
+.dssControl.prev span:hover {
+    background-position: 0 -50px
+}
+
+.dssControl.next span:hover {
+    background-position: -30px -50px
+}
+
+
+/* Responsivel
+---------------------------------------- */
+
+@media only screen
+and (max-width : 736px)
+/*
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)
+---------------------------------------- */
+
+{
+    #slideshow {
+        max-width: 100%
+    }
+    
+    .shop-now-fenice .slide, 
+    .shop-now-fenice div.dssInner {
+        height: 300px !important
+    }
+}
