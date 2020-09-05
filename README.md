@@ -1,7 +1,7 @@
 # nome do projeto
-Nome do Projeto:
-<br/>AccountName:
-<br/>Tipo (B2C / B2B):
+Nome do Projeto: Balletto
+<br/>AccountName: balletto
+<br/>Tipo (B2C / B2B): B2C
 
 
 ## Pasta de desenvolvimento
