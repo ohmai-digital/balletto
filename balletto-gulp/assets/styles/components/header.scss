@@ -1,0 +1,93 @@
+body{
+
+	overflow-x:hidden;
+
+	>img[src*="doubleclick"]{
+		display:none;
+	}
+
+	header{
+		content{
+			position:relative;
+		}
+		@media screen and (min-width:768px){
+			.mycart{
+				position:absolute;
+				right:0;
+				.vtexsc-cart{
+					display:none !important;
+					position:absolute;
+					width:320px;
+					height:343px !important;
+					top:36px;
+					right:0;
+					.vtexsc-productList{
+						height:116px !important;
+				    position: relative;
+				    display: block;
+				    overflow: scroll;
+					}
+					&.active{
+						display:block !important;
+					}
+					.vtexsc-wrap{
+						padding:16px;
+					}
+				}
+				.cartPedidos{
+					display:none !important;
+				}
+			}
+		}
+
+		.search{
+			margin:16px 6px 0 0px;
+		}
+
+		.wishlistIcon{
+			display:inline-block;
+			margin-top:26px;
+			a{
+				display:inline-block;
+				width:22px;
+				height:18px;
+				background-image:url("/arquivos/wishlistIcon.png");
+			}
+			@media screen and (max-width:768px){
+				position:absolute;
+				right:22%;
+				z-index:200;
+				margin-top:14px;
+			}
+		}
+
+	}
+
+	.pbiA,.pbiB{
+		max-width:230px;
+	}
+
+	.BLT_optin .content input{
+		font-size:14px !important;
+		text-transform:capitalize !important;
+	}
+
+	.beneficios{
+		p{
+			font-size:10px !important;
+		}
+	}
+
+	@media screen and (max-width:768px){
+		.prateleira li{
+			.best-price{
+				width:100% !important;
+			}
+			.installment{
+				width:100% !important;
+				font-size:12px !important;
+			}
+		}
+	}
+
+}

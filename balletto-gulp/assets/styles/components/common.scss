@@ -1,0 +1,16 @@
+.whatsappUrl{
+	position:fixed;
+	bottom:42px;
+	right:42px;
+	background:url(https://balletto.vteximg.com.br/arquivos/whatsapp-icon.png) no-repeat;
+	width:46px;
+	height:46px;
+	background-size:contain;
+	z-index:9999999;
+	@media screen and (max-width:768px){
+		bottom:24px;
+		right:24px;
+		width:32px;
+		height:32px;
+	}
+}

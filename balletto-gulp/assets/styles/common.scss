@@ -1,0 +1,24 @@
+//@import 'base/reset.scss';
+
+@import 'tools/alltools.scss';
+
+@font-face {
+font-family: 'Brandon Grotesque';
+font-style: normal;
+font-weight: normal;
+src: local('Brandon Grotesque'), url('https://balletto.vteximg.com.br/arquivos/Brandon_reg_0.otf.css') format('woff');
+}
+
+body{
+	font-family:Brandon Grotesque;
+}
+
+//components
+@import 'components/header.scss';
+@import 'components/wishlist.scss';
+@import 'components/filter.scss';
+@import 'components/common.scss';
+
+.campanha section ul li::before{
+	display:none;
+}
