@@ -14,3 +14,50 @@
 		height:32px;
 	}
 }
+
+@media screen and (max-width:768px){
+.barra-beneficios-topo{
+	padding:4px 0;
+	.slick-track{
+		display:flex !important;
+		flex-direction:row;
+		justify-content:center;
+		p{
+			font-size:9px !important;
+			line-height:normal;
+			margin-top:0;
+		}
+		.slick-slide{
+			width:auto !important;
+		}
+	}
+}
+
+.top-banner--mobile{
+	.box-banner{
+		img{
+			width:100%;
+			height:auto;
+		}
+	}
+}
+}
+
+
+.BLT-departamento{
+	.orderBy,.filterBy{
+		position:relative !important;
+		>select{
+			position:absolute !important;
+			width:100% !important;
+			height:24px !important;
+			top:0 !important;
+			left:0 !important;
+			margin:0 !important;
+			padding:0 !important;
+			@media screen and (max-width:768px){
+				height:32px !important;
+			}
+		}
+	}
+}
