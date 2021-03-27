@@ -1,0 +1,81 @@
+.universe section > div {
+  margin-bottom: 30px; }
+  .universe section > div h1 {
+    color: #777777;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 40px;
+    margin: 20px 0 32px;
+    text-transform: uppercase; }
+  .universe section > div h2 {
+    color: #d4a299;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 36px;
+    margin-bottom: 20px; }
+  .universe section > div p {
+    color: #777777;
+    font-size: 18px;
+    line-height: 26px;
+    margin: 0; }
+  .universe section > div.luciana, .universe section > div.missao {
+    background: #d4a299;
+    padding: 20px 0; }
+    .universe section > div.luciana h2,
+    .universe section > div.luciana p, .universe section > div.missao h2,
+    .universe section > div.missao p {
+      color: #fff; }
+  .universe section > div .luciana__content {
+    align-items: center;
+    display: flex; }
+    @media (max-width: 767px) {
+      .universe section > div .luciana__content {
+        display: block; } }
+  .universe section > div .luciana__left {
+    margin-right: 80px; }
+  .universe section > div .luciana__right {
+    flex-basis: 50%; }
+    @media (max-width: 767px) {
+      .universe section > div .luciana__right {
+        margin-top: 20px; } }
+  .universe section > div .apoio {
+    margin-top: 30px; }
+    .universe section > div .apoio ul {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50px; }
+      @media (max-width: 767px) {
+        .universe section > div .apoio ul {
+          overflow-x: scroll; }
+          .universe section > div .apoio ul li {
+            margin-right: 10px; }
+            .universe section > div .apoio ul li img {
+              width: 100%; } }
+  .universe section > div .tech {
+    margin-bottom: 30px; }
+    .universe section > div .tech ul {
+      display: grid;
+      gap: 40px 20px;
+      grid-template-columns: repeat(2, 1fr);
+      margin: 30px 0; }
+      @media (max-width: 767px) {
+        .universe section > div .tech ul {
+          gap: 20px;
+          grid-template-columns: repeat(1, 1fr); } }
+      .universe section > div .tech ul h3 {
+        font-size: 26px;
+        font-weight: 700;
+        line-height: 40px;
+        margin: 0 0 10px;
+        text-align: center; }
+      .universe section > div .tech ul span {
+        color: #777777;
+        font-size: 18px;
+        line-height: 26px; }
+    .universe section > div .tech__posts {
+      background: #f2f2f2;
+      border-radius: 6px;
+      box-shadow: 0px 0px 10px #00000029;
+      margin-bottom: 10px;
+      padding: 20px 20px 40px; }

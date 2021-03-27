@@ -1,0 +1,122 @@
+.universe section > div {
+  margin-bottom: 30px;
+
+  h1 {
+    color: #777777;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 40px;
+    margin: 20px 0 32px;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    color: #d4a299;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 36px;
+    margin-bottom: 20px;
+  }
+
+  p {
+    color: #777777;
+    font-size: 18px;
+    line-height: 26px;
+    margin: 0;
+  }
+
+  &.luciana,
+  &.missao {
+    background: #d4a299;
+    padding: 20px 0;
+
+    h2,
+    p {
+      color: #fff;
+    }
+  }
+
+  .luciana {
+    &__content {
+      align-items: center;
+      display: flex;
+
+      @media (max-width: 767px) {
+        display: block;
+      }
+    }
+
+    &__left {
+      margin-right: 80px;
+    }
+
+    &__right {
+      flex-basis: 50%;
+
+      @media (max-width: 767px) {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  .apoio {
+    margin-top: 30px;
+
+    ul {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50px;
+
+      @media (max-width: 767px) {
+        overflow-x: scroll;
+
+        li {
+          margin-right: 10px;
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .tech {
+    margin-bottom: 30px;
+
+    ul {
+      display: grid;
+      gap: 40px 20px;
+      grid-template-columns: repeat(2, 1fr);
+      margin: 30px 0;
+
+      @media (max-width: 767px) {
+        gap: 20px;
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      h3 {
+        font-size: 26px;
+        font-weight: 700;
+        line-height: 40px;
+        margin: 0 0 10px;
+        text-align: center;
+      }
+
+      span {
+        color: #777777;
+        font-size: 18px;
+        line-height: 26px;
+      }
+    }
+
+    &__posts {
+      background: #f2f2f2;
+      border-radius: 6px;
+      box-shadow: 0px 0px 10px #00000029;
+      margin-bottom: 10px;
+      padding: 20px 20px 40px;
+    }
+  }
+}

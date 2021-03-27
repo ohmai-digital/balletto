@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:vtex="http://www.vtex.com.br/2009/vtex-common"
+  xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce"
+  lang="pt-BR"
+>
+  <head>
+    <vtex:contentPlaceHolder id="meta-tags" />
+    <vtex:metaTags />
+    <vtex:template id="header-tags" />
+    <link
+      href="/arquivos/lookbook-01.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="/arquivos/balletto-common-universe-01.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+
+  <body>
+    <main>
+      <!--  SubTemplate: Header -->
+      <vtex:template id="Header-Balletto" />
+      <!-- /SubTemplate: Header -->
+
+      <section>
+        <div class="content">
+          <vtex:contentPlaceHolder id="Título Universe" />
+          <vtex:contentPlaceHolder id="Conceito Universe" />
+        </div>
+        <vtex:contentPlaceHolder id="Luciana Balletto" />
+        <div class="content">
+          <vtex:contentPlaceHolder id="Tech Wear" />
+          <vtex:contentPlaceHolder id="Missão" />
+        </div>
+        <vtex:contentPlaceHolder id="Agentes" />
+        <div class="content">
+          <vtex:contentPlaceHolder id="Balletto Consciente" />
+          <vtex:contentPlaceHolder id="Apoio a Dança" />
+        </div>
+      </section>
+
+      <!--  SubTemplate: Footer -->
+      <vtex:template id="Footer-Balletto" />
+      <!-- /SubTemplate: Footer -->
+    </main>
+    <script src="/arquivos/jquery.hashchange.min.js"></script>
+    <script src="/arquivos/jquery.divslideshow-custom.js"></script>
+    <script src="/arquivos/jquery.tooltip.js"></script>
+    <script>
+      <vtex:contentPlaceHolder id="SCRIPT" />;
+    </script>
+    <vtex:template id="BLT-scripts" />
+  </body>
+</html>

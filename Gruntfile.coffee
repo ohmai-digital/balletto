@@ -11,9 +11,19 @@ module.exports = (grunt) ->
   pkg = grunt.file.readJSON('package.json')
 
   accountName = process.env.VTEX_ACCOUNT or pkg.accountName or 'basedevmkp'
-  environment = process.env.VTEX_ENV or pkg.env or 'vtexcommercestable'
-  secureUrl = process.env.VTEX_SECURE_URL or pkg.secureUrl or true
-  port = process.env.PORT or pkg.port or 80
+  environment = process.env.VTEX_ENV or pkg.env or 'vtexcommercestable.com.br'
+  secureUrl = process.env.VTEX_SECURE_URL or pkg.secureUrl or false
+  if secureUrl
+    portAuto = 443
+  else
+    portAuto = 80
+
+  port = process.env.PORT or pkg.port or portAuto or 80
+
+  if secureUrl
+    secureProtocol = 'https'
+  else
+    secureProtocol = 'http'
 
   console.log('Running on port ' + port)
 
@@ -29,7 +39,7 @@ module.exports = (grunt) ->
 
   # portalHost is also used by connect-http-please
   # example: basedevmkp.vtexcommercestable.com.br
-  portalHost = "#{accountName}.#{environment}.com.br"
+  portalHost = "#{accountName}.#{environment}"
   localHost = "#{accountName}.vtexlocal.com.br"
 
   if port isnt 80
@@ -65,6 +75,7 @@ module.exports = (grunt) ->
           cwd: 'src/'
           src: ['**/*.js']
           dest: 'build/arquivos/'
+          ext: '.min.js'
         ]
       css:
         files: [
@@ -73,6 +84,7 @@ module.exports = (grunt) ->
           cwd: 'src/'
           src: ['**/*.css']
           dest: 'build/arquivos/'
+          ext: '.min.css'
         ]
 
     coffee:
@@ -98,7 +110,7 @@ module.exports = (grunt) ->
           cwd: 'src/'
           src: ['**/*.scss']
           dest: 'build/arquivos/'
-          ext: '.css'
+          ext: '.min.css'
         ]
       min:
         options:
@@ -124,7 +136,7 @@ module.exports = (grunt) ->
           cwd: 'src/'
           src: ['**/*.less']
           dest: "build/arquivos/"
-          ext: '.css'
+          ext: '.min.css'
         ]
 
     cssmin:
@@ -150,7 +162,7 @@ module.exports = (grunt) ->
         files: [{
           expand: true
           flatten: true
-          cwd: 'build/'
+          cwd: 'src/'
           src: ['**/*.js', '!**/*.min.js']
           dest: 'build/arquivos/'
           ext: '.min.js'
@@ -178,6 +190,7 @@ module.exports = (grunt) ->
           hostname: "*"
           livereload: true
           port: port
+          protocol: secureProtocol
           middleware: [
             middlewares.disableCompression
             middlewares.rewriteLocationHeader(rewriteLocation)
@@ -225,12 +238,16 @@ module.exports = (grunt) ->
   tasks =
     # Building block tasks
     build: ['clean', 'copy:js', 'copy:css', 'sprite', 'coffee', 'less', 'sass:compile', 'imagemin']
-    min: ['uglify', 'cssmin', 'sass:min'] # minifies files
+    # min: ['uglify', 'cssmin', 'sass:min'] # minifies files
+    min: ['cssmin', 'sass:min'] # minifies files
     # Deploy tasks
     dist: ['build', 'min'] # Dist - minifies files
     test: []
+    # test build files
+    view: ['connect', 'watch']
     # Development tasks
     default: ['build', 'connect', 'watch']
+    
 
   if compress
     tasks.build.push 'min'

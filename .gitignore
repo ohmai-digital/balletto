@@ -3,7 +3,6 @@ node_modules
 ISSUE_TEMPLATE.md
 LICENSE
 package-lock.json
-speed-middleware.coffee
 yarn.lock
 
 # Logs
