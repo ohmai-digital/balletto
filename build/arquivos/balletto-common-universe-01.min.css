@@ -64,6 +64,7 @@
           gap: 20px;
           grid-template-columns: repeat(1, 1fr); } }
       .universe section > div .tech ul h3 {
+        color: #777777;
         font-size: 26px;
         font-weight: 700;
         line-height: 40px;
