@@ -10,8 +10,11 @@ function minicart(){
 
 function wishlist(){
 
-  if($("body").hasClass("product")){
-    $(".productContainer__left .wl-add").attr("data-id",skuJson_0.productId);
+  if($("body").hasClass("produto")){
+  	if(window.innerWidth > 1024){
+  		$(".wl-add").appendTo(".infos");
+  	}
+    $(".wl-add").attr("data-id",skuJson_0.productId);
   }
 
   var userWlId = "empty";
