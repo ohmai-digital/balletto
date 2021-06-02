@@ -22,3 +22,63 @@ body{
 .campanha section ul li::before{
 	display:none;
 }
+
+body.BLT-produto{
+	.swal-text{
+		font-size:0;
+	}
+	.swal-footer{
+		.swal-button-container{
+			position:initial;
+			&:after{
+				font-size:16px;
+				color:rgba(0,0,0,.64);
+				position:absolute;
+				top:40%;
+				left:50%;
+				transform:translate(-50%,-50%);
+				white-space:nowrap;
+				background:#FFF;
+				@media screen and (max-width:768px){
+					top:30%;
+				}
+			}
+			&:nth-of-type(1):after{
+				content:"Por favor, selecione o tamanho desejado.";
+			}
+			&:nth-of-type(2):after{
+				content:"Produto adicionado ao carrinho com sucesso!";
+				padding:4px;
+			}
+		}
+	}
+
+
+	.product-complete{
+		width:100%;
+		max-width:1080px;
+		margin:0 auto;
+		padding:88px 0 48px;
+		h2{
+			font-size:18px;
+			font-weight:700;
+			text-transform:uppercase;
+			text-align:center;
+			letter-spacing:1.3px;
+			padding-bottom:12px;
+		}
+		@media screen and (max-width:768px){
+			float:left;
+			box-sizing:border-box;
+			padding:48px 16px;
+		}
+		ul{
+			display:flex;
+			justify-content:space-between;
+			@media screen and (max-width:768px){
+				display:block;
+			}
+		}
+	}
+
+}
